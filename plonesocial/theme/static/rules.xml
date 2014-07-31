@@ -49,7 +49,11 @@
         content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
 
 
-    <copy css:theme="#topsearchbox" css:content="#portal-searchbox form" attributes="action"/>
+    <!--copy css:theme="#topsearchbox" css:content="#portal-searchbox form" attributes="action"/-->
+    <replace css:content="#portal-searchbox" css:theme="#topsearchbox"/>
+    <drop css:content=".searchButton"/>
+    <drop css:content=".searchSection"/>
+
     <replace css:theme="#center-column">
         <div id="center-column"><xsl:attribute name="class">
                 <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-3:4")'>

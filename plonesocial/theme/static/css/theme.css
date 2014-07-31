@@ -381,3 +381,8 @@ div.row {
 }
 
 
+#portal-searchbox {
+    clear:  none !important;
+    height: 40px !important;
+    margin: 0 0  !important;
+}
