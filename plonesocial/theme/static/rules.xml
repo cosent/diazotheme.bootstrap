@@ -66,11 +66,11 @@
                 <xsl:for-each css:select="#viewlet-above-content > *">
                     <xsl:if test="@id">
                     <xsl:if test="@id!='portlets-above' and
-                                  @id!='portal-breadcrumbs'">
+                                  @id!='portal-breadcrumbs' and not(contains(@class,'portalMessage'))">
                         <xsl:copy-of select="current()"/>
                     </xsl:if>
                     </xsl:if>
-                    <xsl:if test="not(@id)">
+                    <xsl:if test="not(@id) and not(contains(@class,'portalMessage'))">
                         <xsl:copy-of select="current()"/>
                     </xsl:if>
                 </xsl:for-each>
